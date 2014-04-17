@@ -1,1 +1,15 @@
-This is a test README
+Copyright user Greenrazi
+
+This project is an attempt to create an offline desktop application that is easily accessible to almost anyone. The reason it is being developed in Excel instead of as a standalone desktop app (.exe) is because as a PC user, I have maintained a healthy distance from stray executables for fear of viruses and the like; developing in Excel provides some degree of transparency for the cautious. Further, my level of coding knowledge is so lacking that I need outside help in organizing and coding this project, hence its presence on GitHub. Although the development environment of this project doesn't quite meld with repo-based version control, I still hope I can get this project to productively reside here.
+
+This application is intended to be a "build tester" for use by players of the game "League of Legends". Although there are some functions written that utilize the League of Legends API, ultimately they should not be needed; I wrote them just to get a headstart in collecting the data. However, it seems that the API does not provide all the necessary data, so some manual collection and organization of the raw data will be needed prior to achieving this application's intended functionality. If anyone wishes to use the included API calls, please note that you will need to obtain a developer API key (for free) from Riot Games for use with the functions. As the API calls return JSON strings, I have included JSONLIB in the Excel file; this library was not written by me, and I have forgotten where I sourced it from. Due credit will be given as soon as I remember who wrote that library. Please feel free to update the project with this information if you have it.
+
+I have created separate tabs to store the different types of data; the intent is that they can be used somewhat like datatables from a database, though Excel isn't the best medium for working with data in this manner.
+
+The main tab that users will interact with is "TheRing", where a user can specify the values for the variables, with a form button to perform the calculation. The sheet needs to properly be setup like a form, so as to regulate which elements can be interacted with; additionally, certain elements need to update dynamically based on user input into other fields/elements (namely, combo/listBoxes). So far, I plan to handle this using events and user-defined functions. As a starting point, I believe there is a "Worksheet_Changed" event which will trigger on any kind of change to the active worksheet; the code for this event will need to figure out which cell changed and then call the appropriate subroutine/function. The final "calculate" button should call its corresponding function, which will take the variables from the "TheRing" worksheet and return a value back to the sheet for output to the user.
+
+Any and all contributions to this project are greatly appreciated.
+
+Please contact me via GitHub if/when needed.
+
+Thanks
